@@ -1,0 +1,28 @@
+@import './variables.css';
+
+body{
+    background-color: var(--main-bg-color);
+    height: 100vh;
+}
+
+*{
+    color: var(--main-font-color);
+}
+
+.main-border{
+    border: 1px solid var(--main-border-color);
+}
+
+.main-bg-color-lighter{
+    background-color: var(--main-bg-color-light);
+}
+
+.main-hr{
+    border-bottom: 1px solid var(--main-border-color);
+    margin: 0;
+}
+
+main{
+    width: 100%;
+    max-width: 800px;
+}
