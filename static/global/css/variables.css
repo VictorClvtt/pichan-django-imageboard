@@ -1,10 +1,16 @@
 :root {
+    --main-bg-color-dark: oklch(14.8% 0.004 228.8);
     --main-bg-color: oklch(21.8% 0.008 223.9);
     --main-bg-color-light: oklch(27.5% 0.011 216.9);
 
     --main-border-color: oklch(37.8% 0.015 216);
 
+    --main-dark-font-color: oklch(92.5% 0.005 214.3);
     --main-font-color: oklch(98.7% 0.002 197.1);
 
-    --main-accent-color: oklch(79.2% 0.209 151.711);
+    --main-accent-color: oklch(76.5% 0.177 163.223);
+    --main-light-accent-color: oklch(90.5% 0.093 164.15);
+
+    --normal-font-size: 0.875rem;
+    --big-font-size: 1rem;
 }

@@ -1,0 +1,66 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block title %}πchan{% endblock %}
+
+{% block body_class %}
+    d-flex justify-content-center p-4
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main class="home-main">
+        <section class="main-border d-flex flex-column">
+            <h2 class="main-bg-color-light m-0 py-1 px-2 main-big-fs fw-bold lh-base">Boards</h2>
+            <hr class="main-hr">
+            <div class="p-2 row row-cols-4 g-2 boards">
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
+                        <p class="main-normal-fs m-0 lh-base">-</p>
+                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+{% endblock %}

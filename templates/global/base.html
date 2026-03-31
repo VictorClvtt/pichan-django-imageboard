@@ -1,19 +1,21 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'global/css/variables.css' %}">
     <link rel="stylesheet" href="{% static 'global/css/base.css' %}">
-    <title>Document</title>
+    
+    {% block extra_css %}{% endblock %}
+    
+    <title>{% block title %}App{% endblock %}</title>
 </head>
-<body class="d-flex justify-content-center p-4">
-    <main class="main-border d-flex flex-column">
-        <div class="main-bg-color-lighter py-1 px-2">a</div>
-        <hr class="main-hr">
-        <div class="py-1 px-2">a</div>
-    </main>
+<body class="{% block body_class %}{% endblock %}">
+    
+    {% block content %}{% endblock %}
+
 </body>
 </html>

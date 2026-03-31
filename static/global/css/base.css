@@ -1,5 +1,3 @@
-@import './variables.css';
-
 body{
     background-color: var(--main-bg-color);
     height: 100vh;
@@ -13,7 +11,11 @@ body{
     border: 1px solid var(--main-border-color);
 }
 
-.main-bg-color-lighter{
+.main-bg-color-dark{
+    background-color: var(--main-bg-color-dark);
+}
+
+.main-bg-color-light{
     background-color: var(--main-bg-color-light);
 }
 
@@ -22,7 +24,22 @@ body{
     margin: 0;
 }
 
-main{
-    width: 100%;
-    max-width: 800px;
+.main-dark-font-color{
+    color: var(--main-dark-font-color);
+}
+
+.main-normal-fs{
+    font-size: var(--normal-font-size);
+}
+
+.main-accent-color{
+    color: var(--main-accent-color);
+}
+
+.main-light-accent-color{
+    color: var(--main-light-accent-color);
+}
+
+.main-big-fs{
+    font-size: var(--big-font-size);
 }
