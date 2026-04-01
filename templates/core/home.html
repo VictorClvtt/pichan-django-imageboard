@@ -17,48 +17,18 @@
             <h2 class="main-bg-color-light m-0 py-1 px-2 main-big-fs fw-bold lh-base">Boards</h2>
             <hr class="main-hr">
             <div class="p-2 row row-cols-4 g-2 boards">
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
-                        <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/c/</h3>
-                        <p class="main-normal-fs m-0 lh-base">-</p>
-                        <p class="main-normal-fs m-0 lh-base main-dark-font-color">carol do chechão</p>
-                    </a>
-                </div>
+                {% for board in boards %}
+                    <div class="col">
+                        <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                            <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/{{ board.slug }}/</h3>
+                            <p class="main-normal-fs m-0 lh-base">-</p>
+                            <p class="main-normal-fs w-100 m-0 lh-base main-dark-font-color text-ellipsis">{{ board.name }}</p>
+                            {% if board.is_nsfw %}
+                                <span class="m-auto text-danger main-small-fs lh-1 fw-bold">(NSFW)</span>
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         </section>
         

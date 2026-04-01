@@ -11,6 +11,7 @@
     --main-accent-color: oklch(76.5% 0.177 163.223);
     --main-light-accent-color: oklch(90.5% 0.093 164.15);
 
+    --small-font-size: 0.7rem;
     --normal-font-size: 0.875rem;
     --big-font-size: 1rem;
 }
