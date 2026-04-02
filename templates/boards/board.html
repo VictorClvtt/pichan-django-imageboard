@@ -1,0 +1,34 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block title %}πchan{% endblock %}
+
+{% block body_class %}
+    
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <nav class="d-flex justify-content-between main-bg-color-dark py-1 px-2">
+        <div class="d-flex gap-1">
+            {% for slug in slugs %}
+                <a class="main-small-fs" href="{% url 'board' slug %}">/{{ slug }}/</a>
+            {% endfor %}
+        </div>
+        <a class="main-small-fs" href="{% url 'home' %}">Home</a>
+    </nav>
+    <header class="p-3 main-border-bottom">
+        <div class="d-flex align-items-center gap-1 mb-1">
+            <h1 class="main-bigger-fs m-0 lh-1"><span class="main-accent-color fw-bold">/{{ current_board.slug }}/</span> - {{ current_board.name }}</h1>
+            {% if current_board.is_nsfw %}
+                <span class="mt-auto main-bg-color-dark text-danger fw-bold fst-italic main-smaller-fs p-1 lh-1">(NSFW)</span>
+            {% endif %}
+        </div>
+        
+        <p class="main-darker-font-color main-small-fs m-0">{{ current_board.description }}</p>
+    </header>
+    
+{% endblock %}

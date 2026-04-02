@@ -7,8 +7,16 @@ body{
     color: var(--main-font-color);
 }
 
+a{
+    color: oklch(62.3% 0.214 259.815);
+}
+
 .main-border{
     border: 1px solid var(--main-border-color);
+}
+
+.main-border-bottom{
+    border-bottom: 1px solid var(--main-border-color);
 }
 
 .main-bg-color-dark{
@@ -24,8 +32,16 @@ body{
     margin: 0;
 }
 
+.main-darker-font-color{
+    color: var(--main-darker-font-color);
+}
+
 .main-dark-font-color{
     color: var(--main-dark-font-color);
+}
+
+.main-smaller-fs{
+    font-size: var(--smaller-font-size);
 }
 
 .main-small-fs{
@@ -34,6 +50,10 @@ body{
 
 .main-normal-fs{
     font-size: var(--normal-font-size);
+}
+
+.main-bigger-fs{
+    font-size: var(--bigger-font-size);
 }
 
 .main-accent-color{

@@ -6,4 +6,5 @@
 .board-button:hover{
     background-color: var(--main-bg-color-light);
     transition: 0.25s;
+    cursor: pointer;
 }

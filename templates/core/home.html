@@ -12,19 +12,20 @@
 {% endblock %}
 
 {% block content %}
-    <main class="home-main">
+    <main class="home-main d-flex flex-column">
+        <h1 class="d-flex mx-auto"><span class="main-accent-color">π</span>chan</h1>
         <section class="main-border d-flex flex-column">
             <h2 class="main-bg-color-light m-0 py-1 px-2 main-big-fs fw-bold lh-base">Boards</h2>
             <hr class="main-hr">
             <div class="p-2 row row-cols-4 g-2 boards">
                 {% for board in boards %}
                     <div class="col">
-                        <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none">
+                        <a class="d-flex gap-1 main-bg-color-dark main-border px-2 py-1 d-flex board-button text-decoration-none" href="{% url 'board' board.slug %}" title="{{ board.description }}">
                             <h3 class="main-normal-fs main-accent-color fw-bold m-0 lh-base">/{{ board.slug }}/</h3>
                             <p class="main-normal-fs m-0 lh-base">-</p>
                             <p class="main-normal-fs w-100 m-0 lh-base main-dark-font-color text-ellipsis">{{ board.name }}</p>
                             {% if board.is_nsfw %}
-                                <span class="m-auto text-danger main-small-fs lh-1 fw-bold">(NSFW)</span>
+                                <span class="m-auto text-danger main-smaller-fs fw-bold fst-italic">(NSFW)</span>
                             {% endif %}
                         </a>
                     </div>
