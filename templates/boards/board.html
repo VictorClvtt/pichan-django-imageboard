@@ -20,7 +20,7 @@
         </div>
         <a class="main-small-fs" href="{% url 'home' %}">Home</a>
     </nav>
-    <header class="p-3 main-border-bottom">
+    <header class="py-3 px-3 main-border-bottom">
         <div class="d-flex align-items-center gap-1 mb-1">
             <h1 class="main-bigger-fs m-0 lh-1"><span class="main-accent-color fw-bold">/{{ current_board.slug }}/</span> - {{ current_board.name }}</h1>
             {% if current_board.is_nsfw %}
@@ -30,5 +30,31 @@
         
         <p class="main-darker-font-color main-small-fs m-0">{{ current_board.description }}</p>
     </header>
+    <div class="py-2 px-3 main-border-bottom">
+        <!-- Button trigger modal -->
+        <button type="button" class="main-btn main-normal-fs px-2 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            + New Thread
+        </button>
+
+        
+    </div>
     
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header main-bg-color-light rounded-top-1 main-border-bottom">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-theme="dark" aria-label="Close"></button>
+                </div>
+                <div class="main-bg-color modal-body">
+                    ...
+                </div>
+                <div class="modal-footer main-bg-color-light main-border-top rounded-bottom-1">
+                    <button type="button" class="main-neutral-btn py-1 px-2" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="main-btn py-1 px-2">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

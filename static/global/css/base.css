@@ -1,10 +1,10 @@
 body{
-    background-color: var(--main-bg-color);
+    background-color: var(--color-base-900);
     height: 100vh;
 }
 
 *{
-    color: var(--main-font-color);
+    color: var(--color-base-50);
 }
 
 a{
@@ -12,32 +12,40 @@ a{
 }
 
 .main-border{
-    border: 1px solid var(--main-border-color);
+    border: 1px solid var(--color-base-700);
+}
+
+.main-border-top{
+    border-top: 1px solid var(--color-base-700);
 }
 
 .main-border-bottom{
-    border-bottom: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--color-base-700);
 }
 
 .main-bg-color-dark{
-    background-color: var(--main-bg-color-dark);
+    background-color: var(--color-base-950);
+}
+
+.main-bg-color{
+    background-color: var(--color-base-900);
 }
 
 .main-bg-color-light{
-    background-color: var(--main-bg-color-light);
+    background-color: var(--color-base-800);
 }
 
 .main-hr{
-    border-bottom: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--color-base-700);
     margin: 0;
 }
 
 .main-darker-font-color{
-    color: var(--main-darker-font-color);
+    color: var(--color-base-500);
 }
 
 .main-dark-font-color{
-    color: var(--main-dark-font-color);
+    color: var(--color-base-200);
 }
 
 .main-smaller-fs{
@@ -57,15 +65,43 @@ a{
 }
 
 .main-accent-color{
-    color: var(--main-accent-color);
+    color: var(--color-accent-500);
 }
 
 .main-light-accent-color{
-    color: var(--main-light-accent-color);
+    color: var(--color-accent-400);
 }
 
 .main-big-fs{
     font-size: var(--big-font-size);
+}
+
+.main-btn{
+    color: var(--color-base-50);
+    background: var(--color-accent-950);
+    border: 1px solid var(--color-accent-600);
+    border-radius: 4px;
+}
+
+.main-btn:hover{
+    color: var(--color-base-950);
+    background: var(--color-accent-700);
+    border: 1px solid var(--color-accent-700);
+    transition: 0.25s;
+}
+
+.main-neutral-btn{
+    color: var(--color-base-50);
+    background: var(--color-base-800);
+    border: 1px solid var(--color-base-700);
+    border-radius: 3px;
+}
+
+.main-neutral-btn:hover{
+    color: var(--color-base-50);
+    background: var(--color-base-700);
+    border: 1px solid var(--color-base-700);
+    transition: 0.25s;
 }
 
 .text-ellipsis {
