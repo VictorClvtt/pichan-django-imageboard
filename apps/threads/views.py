@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic import View
 
-# Create your views here.
+from . import models
+from apps.threads.forms import ThreadForm
+
+# class Thread(View):

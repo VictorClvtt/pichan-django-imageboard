@@ -35,26 +35,44 @@
         <button type="button" class="main-btn main-normal-fs px-2 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
             + New Thread
         </button>
-
-        
     </div>
+    <main class="d-flex flex-column py-2 px-3">
+        {% for thread in threads %}
+            <div>{{ thread }}</div>
+        {% endfor %}
+    </main>
     
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header main-bg-color-light rounded-top-1 main-border-bottom">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">+ New Thread</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-theme="dark" aria-label="Close"></button>
                 </div>
                 <div class="main-bg-color modal-body">
-                    ...
+                    <form method="post" id="thread-form" class="d-flex flex-column gap-2">
+                        {% csrf_token %}
+                        {% for field in thread_form %}
+                            {{ field }}
+                            {{ field.errors }}
+                        {% endfor %}
+                    </form>
                 </div>
                 <div class="modal-footer main-bg-color-light main-border-top rounded-bottom-1">
                     <button type="button" class="main-neutral-btn py-1 px-2" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="main-btn py-1 px-2">Save changes</button>
+                    <button type="submit" form="thread-form" class="main-btn py-1 px-2">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
+
+    {% if thread_form.errors %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                modal.show();
+            });
+        </script>
+    {% endif %}
 {% endblock %}

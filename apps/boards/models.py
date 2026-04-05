@@ -8,7 +8,7 @@ class Board(models.Model):
         help_text="Board name (ex: Technology, Random)"
     )
     slug = models.SlugField(
-        max_length=50,
+        max_length=20,
         unique=True,
         help_text="Short identifier (ex: tech, b)"
     )
