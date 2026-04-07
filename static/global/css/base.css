@@ -121,3 +121,9 @@ form textarea::placeholder {
     color: var(--color-base-400) !important;
     opacity: 1;
 }
+
+.thread-img{
+    width: 100%;
+    max-width: 250px !important;
+    border-radius: 0px;
+}

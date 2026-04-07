@@ -8,11 +8,17 @@ class Thread(models.Model):
         blank=True,
         help_text="Thread title"
     )
+    
     content = models.TextField(
         help_text="More detailed content of the Thread"
     )
+    
     anon_id = models.CharField(max_length=36, blank=True, db_index=True)
+    
     board = models.ForeignKey(Board, on_delete=models.CASCADE, related_name='threads')
+
+    image = models.ImageField(upload_to='threads/', blank=True, null=True) 
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

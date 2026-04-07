@@ -36,9 +36,19 @@
             + New Thread
         </button>
     </div>
-    <main class="d-flex flex-column py-2 px-3">
+    <main class="d-flex flex-column gap-2 py-2 px-3">
         {% for thread in threads %}
-            <div>{{ thread }}</div>
+            <div class="d-flex gap-2">
+                {% if thread.image %}
+                    <img class="thread-img" src="{{ thread.image.url }}" alt="">
+                {% endif %}
+                <div class="d-flex gap-2 main-bg-color-light main-border p-2 w-auto">
+                    <div class="d-flex flex-column">
+                        <h2 class="fw-bold m-0 mb-1 lh-1 main-big-fs">{{ thread.title }}</h2>
+                        <p class="main-small-fs m-0">{{ thread.content }}</p>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </main>
     
@@ -51,7 +61,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-theme="dark" aria-label="Close"></button>
                 </div>
                 <div class="main-bg-color modal-body">
-                    <form method="post" action="{% url 'thread' current_board.slug %}" id="thread-form" class="d-flex flex-column gap-2">
+                    <form method="post" action="{% url 'thread' current_board.slug %}" id="thread-form" class="d-flex flex-column gap-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in thread_form %}
                             {{ field }}

@@ -10,7 +10,7 @@ class Thread(View):
 
     def post(self, request, slug):
         board = get_object_or_404(Board, slug=slug)
-        form = ThreadForm(request.POST)
+        form = ThreadForm(request.POST, request.FILES)
 
         if 'anon_id' not in request.session:
             request.session['anon_id'] = str(uuid.uuid4())
