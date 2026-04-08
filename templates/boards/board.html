@@ -40,15 +40,25 @@
         {% for thread in threads %}
             <div class="d-flex gap-2">
                 {% if thread.image %}
-                    <img class="thread-img" src="{{ thread.image.url }}" alt="">
+                    <div class="d-flex flex-column">
+                        <img class="thread-img" src="{{ thread.image.url }}" alt="">
+                        <div class="d-flex justify-content-between my-1">
+                            <span class="main-smaller-fs main-darker-font-color lh-1">File: <a href="{{ thread.image.url }}" class="lh-1">{{ thread.image.name|cut:"threads/" }}</a></span>
+                            <span class="main-smaller-fs main-darker-font-color lh-1">({{ thread.image.size|filesizeformat }} {{ thread.image.width }}x{{ thread.image.height }})</span>
+                        </div>
+                    </div>
                 {% endif %}
                 <div class="d-flex gap-2 main-bg-color-light main-border p-2 w-auto">
                     <div class="d-flex flex-column">
                         <h2 class="fw-bold m-0 mb-1 lh-1 main-big-fs">{{ thread.title }}</h2>
-                        <p class="main-small-fs m-0">{{ thread.content }}</p>
+                        <p class="main-small-fs m-0 h-100">{{ thread.content }}</p>
+                        <div>
+                            <span class="main-smaller-fs main-darker-font-color">{{ thread.created_at }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            <hr class="main-hr">
         {% endfor %}
     </main>
     
