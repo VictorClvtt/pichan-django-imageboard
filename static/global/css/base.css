@@ -122,8 +122,10 @@ form textarea::placeholder {
     opacity: 1;
 }
 
-.thread-img{
-    width: 100%;
-    max-width: 250px !important;
-    border-radius: 0px;
+.thread-img {
+  width: 100%;
+  min-width: 275px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
